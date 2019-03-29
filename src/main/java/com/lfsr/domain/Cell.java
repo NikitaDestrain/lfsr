@@ -1,4 +1,4 @@
-package com.lfsr;
+package com.lfsr.domain;
 
 public class Cell {
 

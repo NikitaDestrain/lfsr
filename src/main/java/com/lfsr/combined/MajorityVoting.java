@@ -1,4 +1,4 @@
-package com.lfsr;
+package com.lfsr.combined;
 
 public class MajorityVoting implements IndependentExpert {
 

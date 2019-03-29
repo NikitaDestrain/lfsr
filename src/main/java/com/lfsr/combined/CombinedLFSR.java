@@ -1,4 +1,7 @@
-package com.lfsr;
+package com.lfsr.combined;
+
+import com.lfsr.Constants;
+import com.lfsr.domain.LFSR;
 
 public class CombinedLFSR {
 
@@ -18,15 +21,15 @@ public class CombinedLFSR {
 
         this.lfsr1 = new LFSR(Constants.FIRST_SEED,
                 Constants.FIRST_POLYNOMIAL,
-                Constants.FIRST_RESULT_INDEX,
+                Constants.FIRST_EXTRA_INDEX,
                 true);
         this.lfsr2 = new LFSR(Constants.SECOND_SEED,
                 Constants.SECOND_POLYNOMIAL,
-                Constants.SECOND_RESULT_INDEX,
+                Constants.SECOND_EXTRA_INDEX,
                 true);
         this.lfsr3 = new LFSR(Constants.THIRD_SEED,
                 Constants.THIRD_POLYNOMIAL,
-                Constants.THIRD_RESULT_INDEX,
+                Constants.THIRD_EXTRA_INDEX,
                 true);
     }
 

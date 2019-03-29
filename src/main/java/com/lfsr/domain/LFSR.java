@@ -1,21 +1,23 @@
-package com.lfsr;
+package com.lfsr.domain;
 
 public class LFSR {
 
     private Cell[] sequence;
     private int size;
-    private int currentValueIndex;
+    private int lastIndex;
+    private int extraValueIndex;
     private byte currentValue;
     private boolean state;
 
-    public LFSR(byte[] seed, byte[] polynomialCoefficients, int indexOfResult, boolean initState) {
+    public LFSR(byte[] seed, byte[] polynomialCoefficients, int extraIndex, boolean initState) {
         this.size = seed.length;
-        this.currentValueIndex = indexOfResult;
+        this.lastIndex = size - 1;
+        this.extraValueIndex = extraIndex;
         this.sequence = new Cell[size];
         for (int i = 0; i < size; i++) {
             sequence[i] = new Cell(seed[i], polynomialCoefficients[i + 1] == 1);
         }
-        this.currentValue = sequence[indexOfResult].getValue();
+        this.currentValue = sequence[lastIndex].getValue();
         this.state = initState;
     }
 
@@ -38,7 +40,7 @@ public class LFSR {
     }
 
     private void singleStep() {
-        this.currentValue = sequence[currentValueIndex].getValue();
+        this.currentValue = sequence[lastIndex].getValue();
 
         byte accum = 0;
         byte graybeard = 0;
@@ -49,14 +51,12 @@ public class LFSR {
             if (curCell.getFilter()) {
                 accum ^= cellValue;
             }
-
             if (i != 0) {
                 curCell.setValue(graybeard);
             }
 
             graybeard = cellValue;
         }
-
         sequence[0].setValue(accum);
     }
 
@@ -71,5 +71,9 @@ public class LFSR {
 
     public byte getCurrentValue() {
         return currentValue;
+    }
+
+    public byte getExtraValue() {
+        return sequence[extraValueIndex].getValue();
     }
 }
