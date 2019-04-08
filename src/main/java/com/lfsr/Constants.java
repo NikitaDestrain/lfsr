@@ -73,4 +73,9 @@ public class Constants {
     public static final int A5_1_FIRST_EXTRA_INDEX = 7;
     public static final int A5_1_SECOND_EXTRA_INDEX = 9;
     public static final int A5_1_THIRD_EXTRA_INDEX = 9;
+
+    // for test
+    public static final String RESOURCE_PATH = "resources/";
+    public static final String E_FILE_NAME = "data.e";
+    public static final String PI_FILE_NAME = "data.pi";
 }
