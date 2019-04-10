@@ -19,6 +19,8 @@ public class CombinedLFSR {
         this.fStopExpert = MajorityVoting.getInstance();
         this.independentExpert = MajorityVoting.getInstance();
 
+        // test polynomials from task book
+        /*
         this.lfsr1 = new LFSR(Constants.FIRST_SEED,
                 Constants.FIRST_POLYNOMIAL,
                 Constants.FIRST_EXTRA_INDEX,
@@ -30,6 +32,19 @@ public class CombinedLFSR {
         this.lfsr3 = new LFSR(Constants.THIRD_SEED,
                 Constants.THIRD_POLYNOMIAL,
                 Constants.THIRD_EXTRA_INDEX,
+                true);*/
+
+        this.lfsr1 = new LFSR(Constants.A5_1_FIRST_SEED,
+                Constants.A5_1_FIRST_POLYNOMIAL,
+                Constants.A5_1_FIRST_EXTRA_INDEX,
+                true);
+        this.lfsr2 = new LFSR(Constants.A5_1_SECOND_SEED,
+                Constants.A5_1_SECOND_POLYNOMIAL,
+                Constants.A5_1_SECOND_EXTRA_INDEX,
+                true);
+        this.lfsr3 = new LFSR(Constants.A5_1_THIRD_SEED,
+                Constants.A5_1_THIRD_POLYNOMIAL,
+                Constants.A5_1_THIRD_EXTRA_INDEX,
                 true);
     }
 
@@ -56,7 +71,6 @@ public class CombinedLFSR {
             fStopMajority(winner);
             result[i] = winner;
         }
-
         return result;
     }
 }

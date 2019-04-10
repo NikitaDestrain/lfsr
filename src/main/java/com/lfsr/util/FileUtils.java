@@ -4,15 +4,15 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileReaderUtils {
+public class FileUtils {
 
-    private static FileReaderUtils instance;
+    private static FileUtils instance;
 
-    private FileReaderUtils() {
+    private FileUtils() {
     }
 
-    public static FileReaderUtils getInstance() {
-        if (instance == null) instance = new FileReaderUtils();
+    public static FileUtils getInstance() {
+        if (instance == null) instance = new FileUtils();
         return instance;
     }
 
@@ -40,5 +40,16 @@ public class FileReaderUtils {
             }
         }
         return res;
+    }
+
+    public void writeBytesToFile(String path, String name, byte[] bytes) {
+        try (FileWriter fw = new FileWriter(new File(path + name))) {
+            for (byte b : bytes) {
+                // WA cast to String
+                fw.write(Byte.toString(b));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

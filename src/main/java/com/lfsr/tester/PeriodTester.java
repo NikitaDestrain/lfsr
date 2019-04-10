@@ -71,12 +71,12 @@ public class PeriodTester {
         int registerCount = seed.length;
         int theoreticalPeriod = (int) Math.pow(2, registerCount) - 1;
         int testSize = theoreticalPeriod * 4;
-        
+
         byte[] testSequence = new byte[testSize];
         for (int i = 0; i < testSize; i++) {
             testSequence[i] = lfsr.getNextValue();
         }
-        
+
         byte[] periodValue = new byte[registerCount];
         System.arraycopy(testSequence, theoreticalPeriod * 2, periodValue, 0, registerCount);
         int practicePeriod = periodExpert(testSequence, periodValue);

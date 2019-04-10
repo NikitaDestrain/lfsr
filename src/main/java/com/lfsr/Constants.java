@@ -78,4 +78,5 @@ public class Constants {
     public static final String RESOURCE_PATH = "resources/";
     public static final String E_FILE_NAME = "data.e";
     public static final String PI_FILE_NAME = "data.pi";
+    public static final String LFSR_FILE_NAME = "data.lfsr";
 }
