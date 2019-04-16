@@ -33,9 +33,9 @@ public class A51 {
 
     private void fStop(byte R1, byte R2, byte R3) {
         byte F = (byte) (R1 & R2 | R1 & R3 | R2 & R3);
-        lfsr1.setState(lfsr1.getCurrentValue() == F);
-        lfsr2.setState(lfsr2.getCurrentValue() == F);
-        lfsr3.setState(lfsr3.getCurrentValue() == F);
+        lfsr1.setState(lfsr1.getExtraValue() == F);
+        lfsr2.setState(lfsr2.getExtraValue() == F);
+        lfsr3.setState(lfsr3.getExtraValue() == F);
     }
 
     public byte[] getPseudoRandomSequence(int size) {
@@ -47,5 +47,11 @@ public class A51 {
         }
 
         return result;
+    }
+
+    public byte getPseudoRandomValue(){
+        byte res = (byte) (lfsr1.getNextValue() ^ lfsr2.getNextValue() ^ lfsr3.getNextValue());
+        fStop(lfsr1.getExtraValue(), lfsr2.getExtraValue(), lfsr3.getExtraValue());
+        return res;
     }
 }

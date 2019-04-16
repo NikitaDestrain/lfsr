@@ -70,9 +70,9 @@ public class Constants {
             0, 0, 0, 1
     };
 
-    public static final int A5_1_FIRST_EXTRA_INDEX = 7;
-    public static final int A5_1_SECOND_EXTRA_INDEX = 9;
-    public static final int A5_1_THIRD_EXTRA_INDEX = 9;
+    public static final int A5_1_FIRST_EXTRA_INDEX = 8;
+    public static final int A5_1_SECOND_EXTRA_INDEX = 10;
+    public static final int A5_1_THIRD_EXTRA_INDEX = 10;
 
     // for test
     public static final String RESOURCE_PATH = "resources/";

@@ -23,10 +23,10 @@ public class Main {
 
         for (int i = 0; i < TEST_COUNT; i++) {
             long startTime = System.currentTimeMillis();
-            byte[] pseudoRandomValue = combinedLFSR.getPseudoRandomSequence(PSEUDO_RANDOM_SEQUENCE_SIZE);
-            //byte[] pseudoRandomValue = a51.getPseudoRandomSequence(PSEUDO_RANDOM_SEQUENCE_SIZE);
-            System.out.println("Pseudo random value " + i + ":");
-            printPseudoRandomValue(pseudoRandomValue);
+            //byte[] pseudoRandomValue = combinedLFSR.getPseudoRandomSequence(PSEUDO_RANDOM_SEQUENCE_SIZE);
+            byte[] pseudoRandomValue = a51.getPseudoRandomSequence(PSEUDO_RANDOM_SEQUENCE_SIZE);
+            //System.out.println("Pseudo random value " + i + ":");
+            //printPseudoRandomValue(pseudoRandomValue);
             long timeSpent = System.currentTimeMillis() - startTime;
             System.out.println("time: " + timeSpent + " ms");
             System.out.println();
