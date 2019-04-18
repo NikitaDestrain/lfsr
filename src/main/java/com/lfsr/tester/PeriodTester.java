@@ -97,7 +97,7 @@ public class PeriodTester {
         A51 a51 = A51.getInstance();
         int start = 100;
         int startTestSeqInd = start;
-        int sizeTestSeq = 1000;
+        int sizeTestSeq = 22;
         byte[] testSeq = new byte[sizeTestSeq];
         int counter = 0;
         boolean isReadyForTest = false;
@@ -141,7 +141,7 @@ public class PeriodTester {
                 }
             }
 
-            System.out.println(firstInd - start);
+            //System.out.println(firstInd - start);
         }
         System.out.println("Practice period for A5/1: " + (firstInd - start));
     }

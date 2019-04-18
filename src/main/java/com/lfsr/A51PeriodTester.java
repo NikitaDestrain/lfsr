@@ -18,19 +18,10 @@ public class A51PeriodTester {
         LFSR lfsr3 = new LFSR(Constants.THIRD_SEED, Constants.THIRD_POLYNOMIAL, 0, true);
         pt.periodForLFSR(lfsr3, Constants.THIRD_SEED);
 
-        System.out.println("---------------------A5_1_FIRST_POLYNOMIAL------------------------");
-        LFSR a511 = new LFSR(Constants.A5_1_FIRST_SEED, Constants.A5_1_FIRST_POLYNOMIAL, 0, true);
-        pt.periodForLFSR(a511, Constants.A5_1_FIRST_SEED);
-
-        System.out.println("---------------------A5_1_SECOND_POLYNOMIAL-----------------------");
-        LFSR a512 = new LFSR(Constants.A5_1_SECOND_SEED, Constants.A5_1_SECOND_POLYNOMIAL, 0, true);
-        pt.periodForLFSR(a512, Constants.A5_1_SECOND_SEED);
-
-        System.out.println("---------------------A5_1_THIRD_POLYNOMIAL------------------------");
-        LFSR a513 = new LFSR(Constants.A5_1_THIRD_SEED, Constants.A5_1_THIRD_POLYNOMIAL, 0, true);
-        pt.periodForLFSR(a513, Constants.A5_1_THIRD_SEED);
-
         System.out.println("----------------------------A5_1----------------------------------");
+        long startTime = System.currentTimeMillis();
         pt.periodForA51();
+        long timeSpent = System.currentTimeMillis() - startTime;
+        System.out.println("time: " + timeSpent + " ms");
     }
 }

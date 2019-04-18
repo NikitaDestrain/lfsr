@@ -1,6 +1,7 @@
 package com.lfsr;
 
 import com.lfsr.tester.PeriodTester;
+import com.lfsr.util.FileUtils;
 
 public class PeriodTesterRunner {
 

@@ -20,7 +20,7 @@ public class CombinedLFSR {
         this.independentExpert = MajorityVoting.getInstance();
 
         // test polynomials from task book
-        /*
+
         this.lfsr1 = new LFSR(Constants.FIRST_SEED,
                 Constants.FIRST_POLYNOMIAL,
                 Constants.FIRST_EXTRA_INDEX,
@@ -32,8 +32,8 @@ public class CombinedLFSR {
         this.lfsr3 = new LFSR(Constants.THIRD_SEED,
                 Constants.THIRD_POLYNOMIAL,
                 Constants.THIRD_EXTRA_INDEX,
-                true);*/
-
+                true);
+        /*
         this.lfsr1 = new LFSR(Constants.A5_1_FIRST_SEED,
                 Constants.A5_1_FIRST_POLYNOMIAL,
                 Constants.A5_1_FIRST_EXTRA_INDEX,
@@ -46,6 +46,7 @@ public class CombinedLFSR {
                 Constants.A5_1_THIRD_POLYNOMIAL,
                 Constants.A5_1_THIRD_EXTRA_INDEX,
                 true);
+                */
     }
 
     public static CombinedLFSR getInstance() {
