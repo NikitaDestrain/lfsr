@@ -1,4 +1,4 @@
-package com.lfsr.tester;
+package com.lfsr.tester.pseudorandom;
 
 public class InsufficientNumberOfCyclesException extends Exception {
     public InsufficientNumberOfCyclesException() {

@@ -1,6 +1,6 @@
 package com.lfsr.combined;
 
-import com.lfsr.Constants;
+import com.lfsr.runner.lfsr.Constants;
 import com.lfsr.domain.LFSR;
 
 public class CombinedLFSR {

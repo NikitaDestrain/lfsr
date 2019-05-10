@@ -1,7 +1,7 @@
-package com.lfsr;
+package com.lfsr.runner.lfsr;
 
 import com.lfsr.domain.LFSR;
-import com.lfsr.tester.PeriodTester;
+import com.lfsr.tester.pseudorandom.PeriodTester;
 
 public class A51PeriodTester {
     public static void main(String[] args) {

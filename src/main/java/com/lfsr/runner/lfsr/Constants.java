@@ -1,4 +1,4 @@
-package com.lfsr;
+package com.lfsr.runner.lfsr;
 
 public class Constants {
 

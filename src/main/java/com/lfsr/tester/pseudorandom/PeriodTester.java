@@ -1,6 +1,5 @@
-package com.lfsr.tester;
+package com.lfsr.tester.pseudorandom;
 
-import com.lfsr.Constants;
 import com.lfsr.combined.A51;
 import com.lfsr.domain.LFSR;
 

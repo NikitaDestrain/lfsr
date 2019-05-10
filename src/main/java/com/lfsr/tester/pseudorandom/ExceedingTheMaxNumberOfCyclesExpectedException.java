@@ -1,4 +1,4 @@
-package com.lfsr.tester;
+package com.lfsr.tester.pseudorandom;
 
 public class ExceedingTheMaxNumberOfCyclesExpectedException extends Exception {
     public ExceedingTheMaxNumberOfCyclesExpectedException() {

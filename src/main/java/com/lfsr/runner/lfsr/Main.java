@@ -1,4 +1,4 @@
-package com.lfsr;
+package com.lfsr.runner.lfsr;
 
 import com.lfsr.combined.A51;
 import com.lfsr.combined.CombinedLFSR;

@@ -1,7 +1,6 @@
-package com.lfsr;
+package com.lfsr.runner.lfsr;
 
-import com.lfsr.tester.PeriodTester;
-import com.lfsr.util.FileUtils;
+import com.lfsr.tester.pseudorandom.PeriodTester;
 
 public class PeriodTesterRunner {
 

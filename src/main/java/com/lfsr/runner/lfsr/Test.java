@@ -1,6 +1,6 @@
-package com.lfsr;
+package com.lfsr.runner.lfsr;
 
-import com.lfsr.tester.*;
+import com.lfsr.tester.pseudorandom.*;
 import com.lfsr.util.FileUtils;
 
 public class Test {

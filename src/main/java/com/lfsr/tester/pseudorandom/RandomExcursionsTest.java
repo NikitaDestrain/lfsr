@@ -1,4 +1,4 @@
-package com.lfsr.tester;
+package com.lfsr.tester.pseudorandom;
 
 import static org.apache.commons.math3.special.Gamma.regularizedGammaP;
 import static org.apache.commons.math3.util.FastMath.abs;
